@@ -160,6 +160,11 @@ extern DIRECTIVE dname_to_dirnum(char **cmdp, size_t length);
 typedef struct { int dummy; } CMDFUNC;
 extern const CMDFUNC * engl2fnc(const char *fname);
 
+#ifndef YY_TYPEDEF_YY_SIZE_T
+#define YY_TYPEDEF_YY_SIZE_T
+typedef size_t yy_size_t;
+#endif
+
 #if NO_LEAKS
 extern	void	filters_leaks (void);
 extern	void	flt_leaks (void);
